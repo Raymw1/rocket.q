@@ -44,6 +44,15 @@ body, button, input, textarea {
     margin: 0 auto;
 }
 
+main h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    font-weight: 700;
+    font-size: clamp(20px 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+    line-height: 4.2rem;
+}
+
 .sr-only {
     position: absolute;
     height: 1px;

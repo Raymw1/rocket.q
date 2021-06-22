@@ -26,13 +26,6 @@ main .container {
     width: min(36.3rem, 90%);
 }
 
-main h2 {
-    font-family: "Poppins", sans-serif;
-    color: var(--black);
-    font-size: clamp(20px 5vw, 2.8rem);
-    margin-bottom: 2.4rem;
-}
-
 input, button, .button {
     width: 100%;
 }
