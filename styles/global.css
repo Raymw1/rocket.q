@@ -44,7 +44,7 @@ body, button, input, textarea {
     margin: 0 auto;
 }
 
-main h2 {
+h2 {
     font-family: "Poppins", sans-serif;
     color: var(--black);
     font-weight: 700;
@@ -115,4 +115,14 @@ button > img, .button > img {
     background: var(--white);
     border: .2rem solid var(--blue);
     color: var(--blue);
+}
+
+.button.red, button.red {
+    background: var(--red);
+    color: var(--white);
+}
+
+.button.gray, button.gray {
+    background: var(--gray-light);
+    color: var(--gray-dark);
 }
