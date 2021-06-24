@@ -31,5 +31,5 @@ function sendForm(event, check) {
     const roomId = document.querySelector("header #room-id").dataset.id;
     const questionId = event.currentTarget.dataset.id;
     const slug = check ? "check" : "delete";
-    form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
 }
