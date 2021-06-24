@@ -52,7 +52,7 @@
 
 .input-block:focus-within::after {
     bottom: 4rem;
-    background: var(--hover-red);
+    background: var(--gray-dark);
 }
 
 .modal-wrapper .buttons {
@@ -70,16 +70,17 @@
 }
 
 
-@media (max-width: 460px) {
+@media (max-width: 520px) {
     .modal {
         padding: 10%;
     }
+
     .buttons {
         flex-direction: column;
     }
 
     .buttons .button {
-        width: 90%;
+        width: 100%;
     }
 
     .buttons .button + .button {
