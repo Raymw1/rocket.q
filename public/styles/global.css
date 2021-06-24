@@ -126,3 +126,22 @@ button > img, .button > img {
     background: var(--gray-light);
     color: var(--gray-dark);
 }
+
+.input-block, .textarea-block {
+    position: relative; /* ::after's bottom in its parent */
+    transition: 400ms;
+}
+
+.input-block:focus-within::after, .textarea-block:focus-within::after {
+    content: "";
+    width: calc(100% - 3.2rem);
+    height: .3rem;
+    background: var(--blue);
+    position: absolute;
+    left: 1.6rem;
+    bottom: 1.8rem;
+}
+
+.textarea-block:focus-within::after {
+    bottom: -1.8rem;
+}

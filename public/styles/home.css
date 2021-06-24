@@ -97,3 +97,13 @@ input, button, .button {
         margin: 0 auto;
     }
 }
+
+@media (max-width: 350px) {
+    #home.home header {
+        margin-bottom: 0;
+    }
+
+    #home.home main {
+        margin-top: 0;
+    }
+}

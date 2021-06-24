@@ -11,7 +11,7 @@
     <title>Criar Sala - Rocket.Q</title>
 </head>
 <body>
-    <div id="home" class="content">
+    <div id="home" class="content home">
         <header>
             <a href="#">
                 <img src="assets/logo.svg" alt="Rocket.Q Logo">
@@ -26,8 +26,10 @@
                 <section>
                     <h2>Entre como participante</h2>
                     <form action="#">
-                        <label for="room-id" class="sr-only">Código da sala</label>
-                        <input type="number" name="room-id" id="room-id" placeholder="Código da sala">
+                        <div class="input-block">
+                            <label for="room-id" class="sr-only">Código da sala</label>
+                            <input type="number" name="room-id" id="room-id" placeholder="Código da sala">
+                        </div>
                         <button><img src="assets/enter-room.svg" alt="Entrar na sala">Entrar na sala</button>
                     </form>
                 </section>
