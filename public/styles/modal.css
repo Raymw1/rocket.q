@@ -55,6 +55,10 @@
     background: var(--gray-dark);
 }
 
+.input-block.red:focus-within::after {
+    background: var(--hover-red);
+}
+
 .modal-wrapper .buttons {
     display: flex;
     align-items: center;

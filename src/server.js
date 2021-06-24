@@ -5,6 +5,7 @@ const path = require("path");
 
 server.use(express.static("public"));
 server.set('view engine', "ejs", ).set("views", path.join(__dirname, "/views/"));   // Usin ejs and setting the views path
+server.use(express.urlencoded({extended: true}))
 server.use(route);
 
 const PORT = process.env.PORT||"3000";
