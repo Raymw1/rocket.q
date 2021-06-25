@@ -14,7 +14,7 @@ const modal = {
 }
 
 function handleClick(event) {
-    event.preventDefault()
+    event.preventDefault();
     const check= event.currentTarget.classList.value == 'check' ? true : false;
     const text = check ? "Marcar como lida" : "Excluir";
     modalTitle.innerHTML = `${text} esta pergunta`
