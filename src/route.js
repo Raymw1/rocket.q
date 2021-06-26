@@ -14,6 +14,7 @@ route.get("/create-pass", function(req, res) {
 route.post("/create-pass", roomController.create);
 
 route.get("/room/:room", roomController.open);
+route.post("/enterroom", roomController.enter);
 
 route.post(`/question/create/:room`, questionController.create)
 route.post(`/question/:room/:question/:action`, questionController.index);

@@ -154,6 +154,33 @@ main {
     background: var(--gray-blue);
 }
 
+/* ------------------  NO QUESTIONS  ------------------ */
+.no-questions {
+    text-align: center;
+}
+
+.no-questions img {
+    max-width: 100%;
+}
+
+.no-questions p {
+    width: 28rem;
+    margin: 1.2rem auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--black);
+}
+
+.no-questions p + p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--gray-dark);
+}
+
 /* ------------------  RESPONSIVE  ------------------ */
 @media (max-width: 760px) {
     #room header {
