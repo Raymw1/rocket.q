@@ -13,8 +13,15 @@ module.exports = {
                 await db.run(`INSERT INTO rooms (id, password) VALUES (${roomId}, "${password}");`);
             }
         }
-        // await db.close();
-        res.redirect(`room/${roomId}`)
+        await db.close();
+        return res.redirect(`room/${roomId}`)
+    },
+    async open (req, res) {
+        const db = await Database();
+        roomId = req.params.room;
+        const questions = await db.all(`SELECT id, title, read FROM questions WHERE room_id = ${roomId} AND read = 0`);
+        const questionRead = await db.all(`SELECT id, title, read FROM questions WHERE room_id = ${roomId} AND read = 1`);
+        return res.render("room", { roomId, questions, questionRead });
     }
 }
 

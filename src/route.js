@@ -11,12 +11,11 @@ route.get("/", function(req, res) {
 route.get("/create-pass", function(req, res) {
     return res.render("index", {page: "create-pass"});
 });
-
-route.get("/room/:room", function(req, res) {
-    return res.render("room");
-});
-
-route.post(`/question/:room/:question/:action`, questionController.index);
 route.post("/create-pass", roomController.create);
+
+route.get("/room/:room", roomController.open);
+
+route.post(`/question/create/:room`, questionController.create)
+route.post(`/question/:room/:question/:action`, questionController.index);
 
 module.exports = route;
