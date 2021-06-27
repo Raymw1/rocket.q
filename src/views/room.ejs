@@ -44,9 +44,10 @@
             <section id="questions">
                 <h2 class="sr-only">Perguntas da comunidade</h2>
                 <div class="questions">
+                <% if (!error) { %>
                 <% if (!isQuestions) {%>
                     <%- include('parts/noquestions') %>
-                <% } %>
+                <% } else { %>
                 <% questions.forEach(question => { %>
                     <div class="question-wrapper">
                         <div class="question-content">
@@ -83,6 +84,7 @@
                         </div>
                     </div>
                 <% }) %>
+                <% } %>
                 </div>
             </section>
         </main>
@@ -103,6 +105,14 @@
             </form>
         </div>
     </div>
+    <% }    else { %>
+    <%- include(`parts/apology-modal`) %>
+        <% if (roomId >= 0) { %>
+        <script>
+            setTimeout(() => {window.location.replace("/room/<%= roomId %>")}, 3000);
+        </script>
+        <% } %>
+    <% } %>
     <script src="/scripts/main.js"></script>
 </body>
 </html>

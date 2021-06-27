@@ -17,7 +17,7 @@
     visibility: hidden;
 }
 
-.modal {
+.modal-wrapper .modal {
     width: min(59rem, 90%);
     padding: 6.4rem;
     margin: auto;
@@ -27,35 +27,35 @@
     text-align: center;
 }
 
-.modal h2 {
+.modal-wrapper .modal h2 {
     margin-bottom: 1.2rem;
 }
 
-.modal > p {
+.modal-wrapper .modal > p {
     color: var(--gray-dark);
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 2.4rem;
 }
 
-.modal form .input-block {
+.modal-wrapper .modal form .input-block {
     margin: auto;
     width: min(100%, 30.2rem);
 }
 
-.modal form input {
+.modal-wrapper .modal form input {
     width: min(100%, 30.2rem);
     margin-bottom: 4rem;
     padding: 1.3rem 1.6rem;
     border: 2px solid var(--blue);
 }
 
-.input-block:focus-within::after {
+.modal-wrapper .input-block:focus-within::after {
     bottom: 4rem;
     background: var(--gray-dark);
 }
 
-.input-block.red:focus-within::after {
+.modal-wrapper .input-block.red:focus-within::after {
     background: var(--hover-red);
 }
 
@@ -75,19 +75,19 @@
 
 
 @media (max-width: 520px) {
-    .modal {
+    .modal-wrapper .modal {
         padding: 10%;
     }
 
-    .buttons {
+    .modal-wrapper .buttons {
         flex-direction: column;
     }
 
-    .buttons .button {
+    .modal-wrapper .buttons .button {
         width: 100%;
     }
 
-    .buttons .button + .button {
+    .modal-wrapper .buttons .button + .button {
         margin-top: .8rem;
     }
 }

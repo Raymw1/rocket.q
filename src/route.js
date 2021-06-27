@@ -4,12 +4,12 @@ const questionController = require("./controllers/questionController");
 const roomController = require("./controllers/roomController");
 
 route.get("/", function(req, res) {
-    return res.render("index", {page: "home"});  // Render ejs
+    return res.render("index", {page: "home", error: false});  // Render ejs
 });
 
 
 route.get("/create-pass", function(req, res) {
-    return res.render("index", {page: "create-pass"});
+    return res.render("index", {page: "create-pass", error: false});
 });
 route.post("/create-pass", roomController.create);
 
